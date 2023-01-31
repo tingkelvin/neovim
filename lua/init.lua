@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
     'rose-pine/neovim',
     as = 'rose-pine',
   })
+  use 'folke/tokyonight.nvim'
 
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -65,5 +66,7 @@ return require('packer').startup(function(use)
   use {"akinsho/toggleterm.nvim", tag = '*', config = function()
   require("toggleterm").setup()
   end}
+  use {'nvim-treesitter/nvim-treesitter', {use = ':TSUpdate'}}
+
 end)
 
